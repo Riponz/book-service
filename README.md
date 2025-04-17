@@ -8,12 +8,17 @@
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
+- [Key Features](#key-features)
 
 ---
 
 ## Introduction
 
+This project is a simple microservice-based Book Rental System built with FastAPI. It consists of two independent services:
 
+    📘 Book Service: Manages books with full CRUD operations.
+
+    👤 User Service: Manages users and their rental history, with the ability to rent books by communicating with the Book Service via REST APIs.
 
 ---
 
@@ -55,3 +60,17 @@ docker compose up --build
   ```
 
 ---
+
+
+
+##Key Features
+
+Create, read, update, and delete books and users
+
+Input validation using Pydantic
+
+Separate databases for each service (simulating true microservices)
+
+Error handling and inter-service communication
+
+JWT authentication and Docker support
