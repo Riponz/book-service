@@ -19,12 +19,12 @@ function App() {
       <ToastContainer />
       <Navbar />
       <Routes>
-        <Route path="admin/" element={<Inventory />} />
-        <Route path="admin/book/:id" element={<Details />} />
-        <Route path="admin/add-book" element={<AddBook />} />
-        <Route path="admin/users" element={<Users />} />
-        <Route path="admin/history" element={<RentalsHistory />} />
-        <Route path="admin/update" element={<Update />} />
+        <Route path="/" element={<Inventory />} />
+        <Route path="/book/:id" element={<Details />} />
+        <Route path="/add-book" element={<AddBook />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/history" element={<RentalsHistory />} />
+        <Route path="/update" element={<Update />} />
       </Routes>
     </div>
   )
