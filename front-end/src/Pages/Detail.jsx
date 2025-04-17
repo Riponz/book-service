@@ -18,8 +18,8 @@ function Detail() {
     const navigate = useNavigate()
 
 
-    const GET_BOOK_URL = `http://127.0.0.1:8000/api/v1/books/${id}`
-    const RENT_BOOK_URL = `http://127.0.0.1:5000/api/v1/users/${user?.id}/rent/${id}`
+    const GET_BOOK_URL = `https://book-service-7p3c.onrender.com/api/v1/books/${id}`
+    const RENT_BOOK_URL = `https://user-service-koxz.onrender.com/api/v1/users/${user?.id}/rent/${id}`
 
     useEffect(() => {
             const isTokenValid = (token) => {

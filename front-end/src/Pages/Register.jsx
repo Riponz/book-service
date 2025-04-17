@@ -15,7 +15,7 @@ function Register() {
     const navigate = useNavigate()
     const notify = (msg) => toast(msg)
 
-    const AUTH_URL = "http://127.0.0.1:5000"
+    const AUTH_URL = "https://user-service-koxz.onrender.com"
 
     const handleRegister = async (e) => {
         e.preventDefault()

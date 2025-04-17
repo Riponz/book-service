@@ -13,7 +13,7 @@ function RentCard({ bid, title, author, genre, available }) {
 
     console.log(user)
 
-    const RETURN_BOOK_URL = `http://127.0.0.1:5000/api/v1/users/${user?.id}/return/${bid}`
+    const RETURN_BOOK_URL = `https://user-service-koxz.onrender.com/api/v1/users/${user?.id}/return/${bid}`
 
     const handleReturn = async () => {
         await axios.post(RETURN_BOOK_URL, {}, {

@@ -9,9 +9,9 @@ import { useNavigate } from 'react-router-dom'
 
 function Books() {
 
-    const RENT_BOOK_URL = "http://127.0.0.1:5000/api/v1/rents"
-    const RENT_BOOK_DETAILS = "http://127.0.0.1:8000/api/v1/books/rents"
-    const GET_USER_API = "http://127.0.0.1:5000/users/me/"
+    const RENT_BOOK_URL = "https://user-service-koxz.onrender.com/api/v1/rents"
+    const RENT_BOOK_DETAILS = "https://book-service-7p3c.onrender.com/api/v1/books/rents"
+    const GET_USER_API = "https://user-service-koxz.onrender.com/users/me/"
     const token = Cookies.get('token')
     const [user, setUser] = useState()
     const [rents, setRents] = useState()
@@ -106,10 +106,6 @@ function Books() {
                         genre={book.genre}
                         available={-1} />
                 ))
-            }
-
-            {
-                // console.log(user)
             }
 
         </div>

@@ -10,7 +10,7 @@ function Account() {
     const { user, setUser } = useUser()
     const token = Cookies.get('token')
     const notify = (msg) => toast(msg);
-    const GET_USER_API = "http://127.0.0.1:5000/users/me/"
+    const GET_USER_API = "https://user-service-koxz.onrender.com/users/me/"
 
     useEffect(() => {
         const isTokenValid = (token) => {
