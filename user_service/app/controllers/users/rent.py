@@ -12,8 +12,7 @@ from exception_handlers import UserNotFoundException
 
 load_dotenv()
 
-# BOOK_API_URL = "https://book-service-7p3c.onrender.com/api/v1/books"
-
+BOOK_API_URL = os.getenv("BOOK_API_URL")
 
 async def rent_book(user_id: str, book_id: str, db: AsyncSession):
     result = await db.execute(select(User).filter(User.id == user_id))
@@ -25,12 +24,12 @@ async def rent_book(user_id: str, book_id: str, db: AsyncSession):
     user_schema = UserSchema.model_validate(user)
 
     async with httpx.AsyncClient() as client:
-        book = await client.get(f"{os.getenv("BOOK_API_URL")}/{book_id}")
+        book = await client.get(f"{BOOK_API_URL}/{book_id}")
 
         if book.status_code != 200:
             raise HTTPException(404, detail="Book Not Found")
 
-        rent = await client.patch(f"{os.getenv("BOOK_API_URL")}/{book_id}/rent")
+        rent = await client.patch(f"{BOOK_API_URL}/{book_id}/rent")
 
         if rent.status_code != 200:
             raise HTTPException(404, detail="Book Not Available")
