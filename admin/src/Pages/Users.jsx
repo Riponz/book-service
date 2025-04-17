@@ -5,7 +5,7 @@ import UserCard from '../Components/UserCard'
 function Users() {
 
   const [users, setUsers] = useState()
-  const GET_USERS_URL = "http://127.0.0.1:5000/api/v1/users/"
+  const GET_USERS_URL = "https://user-service-koxz.onrender.com/api/v1/users/"
 
   useEffect(() => {
     const fetchUsers = async () => {

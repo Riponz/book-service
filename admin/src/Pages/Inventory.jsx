@@ -6,7 +6,7 @@ function Inventory() {
 
     const [books, setBooks] = useState()
     const [refresh, setRefresh] = useState(false)
-    const GET_BOOK_URL = "http://127.0.0.1:8000/api/v1/books"
+    const GET_BOOK_URL = "https://book-service-7p3c.onrender.com/api/v1/books"
 
     useEffect(() => {
       const fetchBooks = async () => {

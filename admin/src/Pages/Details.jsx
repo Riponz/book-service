@@ -8,7 +8,7 @@ function Details() {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const GET_BOOK_URL = `http://127.0.0.1:8000/api/v1/books/${id}`
+    const GET_BOOK_URL = `https://book-service-7p3c.onrender.com/api/v1/books/${id}`
 
     const [book, setBook] = useState()
     const [update, setUpdate] = useState(false)

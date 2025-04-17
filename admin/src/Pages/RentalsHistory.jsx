@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 function RentalsHistory() {
 
     const [rentals, setRentals] = useState()
-    const GET_RENTALS_URL = "http://127.0.0.1:5000/api/v1/rents/"
+    const GET_RENTALS_URL = "https://user-service-koxz.onrender.com/api/v1/rents/"
 
     useEffect(() => {
         const fetchRentals = async () => {

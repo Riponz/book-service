@@ -10,7 +10,7 @@ function Card({ id, title, author, genre, available, ref, toggle }) {
 
     const notify = (msg) => toast(msg)
 
-    const DELETE_BOOK_URL = `http://127.0.0.1:8000/api/v1/books/${id}/delete`
+    const DELETE_BOOK_URL = `https://book-service-7p3c.onrender.com/api/v1/books/${id}/delete`
 
     const handleDetails = () => {
         navigate(`/book/${id}`)

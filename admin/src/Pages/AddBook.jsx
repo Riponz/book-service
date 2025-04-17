@@ -11,7 +11,7 @@ function AddBook() {
 
     const notify = (msg) => toast(msg)
 
-    const ADD_BOOK_URL = "http://127.0.0.1:8000/api/v1/books/"
+    const ADD_BOOK_URL = "https://book-service-7p3c.onrender.com/api/v1/books/"
 
 
     const handleTitle = (e) => {
