@@ -1,5 +1,5 @@
 # Book Rental Microservice
-[Live Demo](https://bookrental-murex.vercel.app/login)
+[Live Demo](https://bookrental-murex.vercel.app)
 
 ---
 
