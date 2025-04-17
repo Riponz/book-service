@@ -2,8 +2,8 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from book_service.app.exception_handlers import BookBaseException
-from book_service.app.routes.v1.routes import router as book_router
+from exception_handlers import BookBaseException
+from routes.v1.routes import router as book_router
 
 app = FastAPI()
 

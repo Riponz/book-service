@@ -2,10 +2,10 @@ import os
 from dotenv import load_dotenv
 from fastapi import HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.utils.user import get_user
+from utils.user import get_user
 from jose import jwt, JWTError
 from fastapi.security import OAuth2PasswordBearer
-from user_service.app.database import get_db
+from database import get_db
 
 load_dotenv()
 

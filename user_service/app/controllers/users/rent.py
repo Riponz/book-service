@@ -2,11 +2,11 @@ import httpx
 from fastapi import HTTPException
 from sqlalchemy import select, and_
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.models.user import User
-from user_service.app.models.rental import Rental
-from user_service.app.schemas.user import UserSchema
-from user_service.app.schemas.response import ResponseSchema
-from user_service.app.exception_handlers import UserNotFoundException
+from models.user import User
+from models.rental import Rental
+from schemas.user import UserSchema
+from schemas.response import ResponseSchema
+from exception_handlers import UserNotFoundException
 
 BOOK_API_URL = "http://book_service:8000/api/v1/books"
 

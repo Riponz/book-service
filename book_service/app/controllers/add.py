@@ -1,8 +1,8 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from book_service.app.models.books import Book
-from book_service.app.schemas.book import BookSchema, BookCreateSchema
-from book_service.app.schemas.response import ResponseSchema
-from book_service.app.exception_handlers import NegetiveCountException
+from models.books import Book
+from schemas.book import BookSchema, BookCreateSchema
+from schemas.response import ResponseSchema
+from exception_handlers import NegetiveCountException
 
 
 

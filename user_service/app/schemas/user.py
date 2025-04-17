@@ -1,6 +1,6 @@
 from pydantic import EmailStr
 from typing import Optional
-from user_service.app.schemas.base import Base
+from schemas.base import Base
 
 
 class UserCreateSchema(Base):

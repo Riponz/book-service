@@ -1,6 +1,6 @@
-from book_service.app.schemas.base import Base
+from schemas.base import Base
 from typing import Union, List
-from book_service.app.schemas.book import BookSchema
+from schemas.book import BookSchema
 
 
 class ResponseSchema(Base):

@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 import os
 
-from book_service.app.models.base import Base
+from models.base import Base
 
 BOOK_DB_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./books.db")
 

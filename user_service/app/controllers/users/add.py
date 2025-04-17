@@ -1,10 +1,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.schemas.response import ResponseSchema
-from user_service.app.schemas.user import UserSchema, UserCreateSchema
-from user_service.app.models.user import User
-from user_service.app.utils.password import get_password_hash
-from user_service.app.utils.user import get_user
-from user_service.app.exception_handlers import DuplicateUserException
+from schemas.response import ResponseSchema
+from schemas.user import UserSchema, UserCreateSchema
+from models.user import User
+from utils.password import get_password_hash
+from utils.user import get_user
+from exception_handlers import DuplicateUserException
 
 
 

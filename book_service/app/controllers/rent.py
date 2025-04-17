@@ -1,9 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.exceptions import HTTPException
 from sqlalchemy import select
-from book_service.app.models.books import Book
-from book_service.app.schemas.book import BookSchema
-from book_service.app.schemas.response import ResponseSchema
+from models.books import Book
+from schemas.book import BookSchema
+from schemas.response import ResponseSchema
 
 
 

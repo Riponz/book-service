@@ -1,5 +1,5 @@
 from typing import Optional, List
-from book_service.app.schemas.base import Base
+from schemas.base import Base
 
 class BookSchema(Base):
     id: str

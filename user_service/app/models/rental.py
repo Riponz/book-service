@@ -1,7 +1,7 @@
 from sqlalchemy import ForeignKey
 from uuid import uuid4
 from sqlalchemy.orm import Mapped, mapped_column
-from user_service.app.models.base import Base
+from models.base import Base
 
 
 

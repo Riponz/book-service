@@ -1,6 +1,6 @@
 import os
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
-from user_service.app.models.base import Base
+from models.base import Base
 
 
 USER_DB_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./users.db")

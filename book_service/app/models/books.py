@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from uuid import uuid4
-from book_service.app.models.base import Base
+from models.base import Base
 
 
 

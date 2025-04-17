@@ -1,7 +1,7 @@
 from sqlalchemy import select
-from user_service.app.models.user import User
+from models.user import User
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.utils.password import verify_password
+from utils.password import verify_password
 
 
 async def get_user(username: str, db : AsyncSession):

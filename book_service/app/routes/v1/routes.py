@@ -2,16 +2,16 @@ from fastapi import APIRouter, Depends, Response
 from typing import Annotated
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import IntegrityError, OperationalError, DataError, TimeoutError
-from book_service.app.schemas.book import BookUpdateSchema, BookCreateSchema, BookIdsSchema
-from book_service.app.database import get_db
-from book_service.app.controllers.add import db_add_book
-from book_service.app.controllers.get import db_get_book_by_id, db_get_all
-from book_service.app.controllers.update import db_update_book
-from book_service.app.controllers.delete import db_delete_book
-from book_service.app.controllers.rent import db_rent_book, db_return_book
-from book_service.app.controllers.get import db_get_books_by_ids
+from schemas.book import BookUpdateSchema, BookCreateSchema, BookIdsSchema
+from database import get_db
+from controllers.add import db_add_book
+from controllers.get import db_get_book_by_id, db_get_all
+from controllers.update import db_update_book
+from controllers.delete import db_delete_book
+from controllers.rent import db_rent_book, db_return_book
+from controllers.get import db_get_books_by_ids
 
-from book_service.app.exception_handlers import (
+from exception_handlers import (
     BookIntegrityException,
     BookDataException,
     BookOperationalException,

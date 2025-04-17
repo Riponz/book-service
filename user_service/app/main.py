@@ -2,12 +2,12 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from user_service.app.exception_handlers import UserBaseException
+from exception_handlers import UserBaseException
 
 
-from user_service.app.routes.user.v1.routes import router as user_router
-from user_service.app.routes.auth.v1.auth import router as auth_router
-from user_service.app.routes.rental.v1.rent import router as rent_router
+from routes.user.v1.routes import router as user_router
+from routes.auth.v1.auth import router as auth_router
+from routes.rental.v1.rent import router as rent_router
 
 app = FastAPI()
 

@@ -1,19 +1,19 @@
 from fastapi import APIRouter, Depends, Response, HTTPException
 from typing import Annotated
-from user_service.app.schemas.response import ResponseSchema
-from user_service.app.exception_handlers import UserIntegrityException, UserTimeOutException
-from user_service.app.exception_handlers import UserDataException, UserOperationalException
 from sqlalchemy.exc import IntegrityError, OperationalError, DataError, TimeoutError
-from user_service.app.database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.schemas.user import UserSchema, UserCreateSchema, UserUpdateSchema
-from user_service.app.controllers.users.add import add_user
-from user_service.app.controllers.users.get import all_users
-from user_service.app.controllers.users.update import update_user
-from user_service.app.controllers.users.delete import delete_user
-from user_service.app.controllers.users.rent import rent_book, return_book
-from user_service.app.utils.authentication import get_current_user
-from user_service.app.utils.user import get_user
+from schemas.response import ResponseSchema
+from exception_handlers import UserIntegrityException, UserTimeOutException
+from exception_handlers import UserDataException, UserOperationalException
+from database import get_db
+from schemas.user import UserSchema, UserCreateSchema, UserUpdateSchema
+from controllers.users.add import add_user
+from controllers.users.get import all_users
+from controllers.users.update import update_user
+from controllers.users.delete import delete_user
+from controllers.users.rent import rent_book, return_book
+from utils.authentication import get_current_user
+from utils.user import get_user
 
 
 router = APIRouter()

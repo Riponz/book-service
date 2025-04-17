@@ -1,8 +1,8 @@
 from typing import Optional, Union, List
 
-from user_service.app.schemas.rentals import RentalSchema
-from user_service.app.schemas.user import UserSchema
-from user_service.app.schemas.base import Base
+from schemas.rentals import RentalSchema
+from schemas.user import UserSchema
+from schemas.base import Base
 
 class ResponseSchema(Base):
     status_code: int

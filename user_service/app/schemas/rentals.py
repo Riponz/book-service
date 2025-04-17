@@ -1,4 +1,4 @@
-from user_service.app.schemas.base import Base
+from schemas.base import Base
 
 class RentalSchema(Base):
     id: str

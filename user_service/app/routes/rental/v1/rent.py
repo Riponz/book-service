@@ -1,13 +1,13 @@
 from typing import Annotated
 from sqlalchemy import select
-from user_service.app.schemas.user import UserSchema
-from user_service.app.models.rental import Rental
+from schemas.user import UserSchema
+from models.rental import Rental
 from fastapi import APIRouter, Depends
-from user_service.app.database import get_db
+from database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
-from user_service.app.utils.authentication import get_current_user
-from user_service.app.schemas.response import ResponseSchema
-from user_service.app.schemas.rentals import RentalSchema
+from utils.authentication import get_current_user
+from schemas.response import ResponseSchema
+from schemas.rentals import RentalSchema
 
 router = APIRouter()
 

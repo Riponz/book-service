@@ -1,9 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from book_service.app.models.books import Book
-from book_service.app.schemas.book import BookSchema, BookIdsSchema
-from book_service.app.schemas.response import ResponseSchema
-from book_service.app.exception_handlers import BookNotFoundException
+from models.books import Book
+from schemas.book import BookSchema, BookIdsSchema
+from schemas.response import ResponseSchema
+from exception_handlers import BookNotFoundException
 
 
 

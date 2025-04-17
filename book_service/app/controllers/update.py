@@ -1,10 +1,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from book_service.app.models.books import Book
-from book_service.app.schemas.book import BookSchema, BookUpdateSchema
-from book_service.app.schemas.response import ResponseSchema
-from book_service.app.exception_handlers import BookNotFoundException
-from book_service.app.exception_handlers import NegetiveCountException
+from models.books import Book
+from schemas.book import BookSchema, BookUpdateSchema
+from schemas.response import ResponseSchema
+from exception_handlers import BookNotFoundException
+from exception_handlers import NegetiveCountException
 
 
 async def db_update_book(book_details: BookUpdateSchema, book_id: str, db: AsyncSession):
