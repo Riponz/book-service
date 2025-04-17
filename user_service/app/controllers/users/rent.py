@@ -1,4 +1,6 @@
 import httpx
+import os
+from dotenv import load_dotenv
 from fastapi import HTTPException
 from sqlalchemy import select, and_
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -8,7 +10,9 @@ from schemas.user import UserSchema
 from schemas.response import ResponseSchema
 from exception_handlers import UserNotFoundException
 
-BOOK_API_URL = "http://book_service:8000/api/v1/books"
+load_dotenv()
+
+# BOOK_API_URL = "https://book-service-7p3c.onrender.com/api/v1/books"
 
 
 async def rent_book(user_id: str, book_id: str, db: AsyncSession):
@@ -21,12 +25,12 @@ async def rent_book(user_id: str, book_id: str, db: AsyncSession):
     user_schema = UserSchema.model_validate(user)
 
     async with httpx.AsyncClient() as client:
-        book = await client.get(f"{BOOK_API_URL}/{book_id}")
+        book = await client.get(f"{os.getenv("BOOK_API_URL")}/{book_id}")
 
         if book.status_code != 200:
             raise HTTPException(404, detail="Book Not Found")
 
-        rent = await client.patch(f"{BOOK_API_URL}/{book_id}/rent")
+        rent = await client.patch(f"{os.getenv("BOOK_API_URL")}/{book_id}/rent")
 
         if rent.status_code != 200:
             raise HTTPException(404, detail="Book Not Available")
