@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  book_service:
+    build:
+      context: ./book_service
+    volumes:
+      - ./book_service:/app/book_service
+      - ./book_service/app:/app/book_service/app
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/book_service
+      - DATABASE_URL=sqlite+aiosqlite:////app/book_service/app/books.db
+    command: uvicorn book_service.app.main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - backend
+
+  user_service:
+    build:
+      context: ./user_service
+    volumes:
+      - ./user_service:/app/user_service
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONPATH=/user_service
+      - DATABASE_URL=sqlite+aiosqlite:////app/user_service/app/users.db
+    command: uvicorn user_service.app.main:app --host 0.0.0.0 --port 5000 --reload
+    depends_on:
+      - book_service
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
